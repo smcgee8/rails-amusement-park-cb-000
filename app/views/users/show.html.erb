@@ -12,7 +12,7 @@
   <li>Tickets: <%= @user.tickets %></li>
 </ul>
 
-<%= link_to "See attractions", attractions_path %>
+<%= link_to "See attractions", attractions_path %><br>
 
 <% if logged_in? %>
   <%= link_to "Log Out", signout_path, method: 'delete' %>

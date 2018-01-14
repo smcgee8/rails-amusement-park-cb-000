@@ -11,6 +11,7 @@ class Ride < ActiveRecord::Base
       return "Sorry. " + messages.join(" ") if messages.present?
     else
       update_stats
+      return "Thanks for riding the #{self.attraction.name}!"
     end
   end
 
