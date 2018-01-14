@@ -22,7 +22,7 @@ class AttractionsController < ApplicationController
   end
 
   def edit
-    @attraction.find(params[:id])
+    Attraction.find(params[:id])
   end
 
   def update
