@@ -1,5 +1,9 @@
 <h1><%= @user.name %></h1>
 
+<% if @user.admin %>
+  <h3>ADMIN</h3>
+<% end %>
+
 <ul>
   <li>Height: <%= @user.height %></li>
   <li>Mood: <%= @user.mood %></li>
@@ -11,5 +15,5 @@
 <%= link_to "See attractions", attractions_path %>
 
 <% if logged_in? %>
-  <%= link_to "Sign Out", signout_path, method: 'delete' %>
+  <%= link_to "Log Out", signout_path, method: 'delete' %>
 <% end %>
